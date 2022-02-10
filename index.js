@@ -21,3 +21,5 @@ fetch('https://apidatta.herokuapp.com/Data')
         SM.appendChild(MyContent);
     }
 })
+
+
