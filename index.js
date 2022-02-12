@@ -28,17 +28,18 @@ fetch('https://apidatta.herokuapp.com/skills')
 .then(json => {
     var skills = document.getElementById('skil');
     var OriginalContent = `<div class="progress">
-    <span class="skill">x1 <i class="val">x2</i></span>
-    <div class="progress-bar-wrap" >x3
+    <span class="name"> <i class="val"></i></span>
+    <div class="progress-bar-wrap">
+      <div class="percentage" role="progressbar" aria-valuenow="per" ></div>
     </div>
   </div>`;
     for(var i=0;i<json.length;i++)
     {
         var MyContent = document.createElement('div');
         var CustomisedContent = OriginalContent;
-        CustomisedContent = CustomisedContent.replace('x1',json[i].name);
-        CustomisedContent = CustomisedContent.replace('x2',json[i].percentage);
-        CustomisedContent = CustomisedContent.replace('x3',json[i].prt);
+        CustomisedContent = CustomisedContent.replace('val',json[i].name);
+        CustomisedContent = CustomisedContent.replace('percentage',json[i].percentage);
+        CustomisedContent = CustomisedContent.replace('per',json[i].per);
         MyContent.className='col-lg-4 col-md-6 icon-box'
         MyContent.innerHTML = CustomisedContent;
         skills.appendChild(MyContent);
