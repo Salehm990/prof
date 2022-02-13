@@ -40,7 +40,7 @@ fetch('https://apidatta.herokuapp.com/skills')
         CustomisedContent = CustomisedContent.replace('val',json[i].name);
         CustomisedContent = CustomisedContent.replace('percentage',json[i].percentage);
         CustomisedContent = CustomisedContent.replace('per',json[i].per);
-        MyContent.className='col-lg-4 col-md-6 icon-box'
+        MyContent.className='col-lg-6 col-md-4 icon-box'
         MyContent.innerHTML = CustomisedContent;
         skills.appendChild(MyContent);
     }
