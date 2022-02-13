@@ -27,7 +27,7 @@ fetch('https://apidatta.herokuapp.com/skills')
 .then(response => response.json())
 .then(json => {
     var skills = document.getElementById('skil');
-    var OriginalContent2 = `<div class="progress">
+    var OriginalContent2 = `<div>
     <span class="name">x1 <i class="percentage">x2</i></span>
     <div class="progress-bar-wrap">
       <div class="progress-bar" role="progressbar" aria-valuenow="per"
